@@ -50,88 +50,22 @@ end
 
 def reduce_to_all_true(source_array)
   i = 0
+  total = true
     while i < source_array.length do
-      if source_array[i] = true
-        return true
-      elsif source_array[i] = false
-        return false
+      total = total && source_array[i]
       i += 1
-      end
-  end
+    end
+  return total
 end
 
 def reduce_to_any_true(source_array)
-i = 0
-  if
+  i = 0
+  total = false
     while i < source_array.length do
-      source_array[i] = true
+      if total = total || source_array[i]
+      else total = total && source_array[i]
+      end
       i += 1
     end
-    return true
-  else
-    return false
-  end
+  return !!total
 end
-
-
-#i = 0
-#  while i < source_array.length do
-#    if source_array[i] = true
-#      return true
-#    elsif source_array[i] = false
-#      return false
-#    i += 1
-#    end
-#  end
-
-
-# i = 0
-# value == "true"
-#   while i < source_array.length do
-#     if source_array[i] = true
-#       value == "true"
-#     else
-#       value == "false"
-#     i += 1
-#     end
-#   end
-# return value
-
-
-
-
-#i = 0
-#  if
-#    while i < source_array.length do
-#      source_array[i] = true
-#      i += 1
-#    end
-#    return true
-#  else
-#    return false
-#  end
-
-#i = 0
-#value
-#  if
-#    while i < source_array.length do
-#      source_array[i] = true
-#      i += 1
-#    end
-#    value = true
-#  else
-#    value = false
-#  end
-# return value
-
-
-#i = 0
-#    if
-#      while source_array[i] do
-#        value = true
-#        i += 1
-#      end
-#    else
-#      value = false
-#    end
-#return value
