@@ -63,7 +63,6 @@ def reduce_to_any_true(source_array)
   total = false
     while i < source_array.length do
       if total = total || source_array[i]
-      else total = total && source_array[i]
       end
       i += 1
     end
